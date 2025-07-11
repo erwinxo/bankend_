@@ -20,7 +20,7 @@ async def test_mongodb_connection():
         # Test connection by listing databases
         print("Testing connection...")
         db_list = await client.list_database_names()
-        print(f"✅ Successfully connected to MongoDB!")
+        print(f" Successfully connected to MongoDB!")
         print(f"Available databases: {db_list}")
         
         # Connect to specific database
@@ -42,10 +42,10 @@ async def test_mongodb_connection():
         
         # Close connection
         client.close()
-        print("✅ Database connection test completed successfully!")
+        print("Database connection test completed successfully!")
         
     except Exception as e:
-        print(f"❌ Database connection failed: {str(e)}")
+        print(f"Database connection failed: {str(e)}")
         print("Please check your MongoDB URL and network connection.")
 
 if __name__ == "__main__":
